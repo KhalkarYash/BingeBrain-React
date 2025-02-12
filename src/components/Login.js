@@ -4,9 +4,12 @@ import { checkValidData } from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -16,6 +19,8 @@ const Login = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
+
+  const dispatch = useDispatch();
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
@@ -39,8 +44,27 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
+          updateProfile(auth.currentUser, {
+            displayName: name.current.value,
+            photoURL: "https://avatars.githubusercontent.com/u/166640986?v=4",
+          })
+            .then(() => {
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+              navigate("/browse", { replace: true });
+            })
+            .catch((error) => {
+              setErrorMessage(error);
+            });
           console.log(user);
-          navigate("/browse")
+          navigate("/browse", { replace: true });
           // ...
         })
         .catch((error) => {
@@ -60,7 +84,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse")
+          navigate("/browse", { replace: true });
           // ...
         })
         .catch((error) => {
@@ -73,18 +97,18 @@ const Login = () => {
 
   return (
     <div>
-      <Header />
-      <div className="absolute">
+      <Header isSignInForm={isSignInForm} />
+      <div className="absolute w-screen scroll">
         {/* <img className="bg-cover" alt="NetflixUI" src="./Login Bg.jpg"></img> */}
         <img
-          className="bg-cover"
+          className="bg-no-repeat bg-cover bg-center"
           alt="NetflixUI"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/fb5cb900-0cb6-4728-beb5-579b9af98fdd/web/IN-en-20250127-TRIFECTA-perspective_cf66f5a3-d894-4185-9106-5f45502fc387_large.jpg"
         ></img>
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-3/12 absolute p-12 bg-black bg-opacity-80 my-36 mx-auto right-0 left-0 text-white rounded-lg"
+        className="w-3/4 lg:w-3/12 absolute p-12 bg-black bg-opacity-80 my-36 mx-auto right-0 left-0 text-white rounded-lg transition-all"
       >
         <h1 className="font-bold text-3xl py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
