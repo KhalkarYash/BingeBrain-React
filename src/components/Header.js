@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { avatar, logo } from "../utils/constants";
+import { user_avatar, logo } from "../utils/constants";
 import { useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
@@ -67,7 +67,7 @@ const Header = () => {
         <div className="p-2">
           <img
             className="w-12 h-12 rounded-lg"
-            src={avatar}
+            src={user_avatar}
             alt="user-icon"
             onClick={handleProfileClick}
           ></img>
