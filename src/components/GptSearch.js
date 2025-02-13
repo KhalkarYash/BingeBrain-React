@@ -5,7 +5,7 @@ import GptSearchBar from "./GptSearchBar";
 const GptSearch = () => {
   return (
     <div>
-        <div className="absolute w-screen scroll -z-10">
+        <div className="fixed w-screen scroll -z-10">
         <img
           className="h-screen sm:h-auto bg-no-repeat bg-cover bg-center"
           alt="NetflixUI"
