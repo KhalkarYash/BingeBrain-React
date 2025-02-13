@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# NetflixGPT React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the NetflixGPT React Application! This project is a Netflix-inspired web application that leverages Google's Gemini API to provide users with intelligent movie recommendations and an enhanced streaming experience.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Environment Variables](#environment-variables)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Important Information](#important-information)
+- [Screenshots](#screenshots)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User Authentication**: Secure login and registration system.
+- **Movie Browsing**: Explore a vast collection of movies with detailed information.
+- **Intelligent Recommendations**: Receive personalized movie suggestions powered by the Gemini API.
+- **Responsive Design**: Optimized for various devices to ensure a seamless user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Firebase**: Platform for authentication and hosting.
+- **Google Gemini API**: Provides AI-driven movie recommendations.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To get a local copy of the project up and running, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/KhalkarYash/netflix-gpt-react.git
+   cd netflix-gpt-react
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install Dependencies**:
+   Ensure you have [Node.js](https://nodejs.org/) and npm installed. Then, run:
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Set Up Environment Variables**:
+   Create a `.env` file in the root directory and add the necessary API keys (see [Environment Variables](#environment-variables) section).
 
-### `npm run eject`
+4. **Start the Application**:
+   ```bash
+   npm start
+   ```
+   The app will run in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Environment Variables
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application requires the following environment variables:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `REACT_APP_TMDB_API_KEY`: Your API key from [The Movie Database (TMDB)](https://www.themoviedb.org/).
+- `REACT_APP_GEMINI_API_KEY`: Your API key from [Google's Gemini API](https://ai.google.dev/).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a `.env` file in the root directory and add:
 
-## Learn More
+```
+REACT_APP_TMDB_API_KEY=your_tmdb_api_key
+REACT_APP_GEMINI_API_KEY=your_gemini_api_key
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Replace `your_tmdb_api_key` and `your_gemini_api_key` with your actual API keys.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+```
+netflix-gpt-react/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── .env.example
+├── .gitignore
+├── firebase.json
+├── package.json
+├── README.md
+└── ...
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **`public/`**: Contains static assets.
+- **`src/`**: Contains the React components and pages.
+- **`.env.example`**: Example environment variables file.
+- **`firebase.json`**: Firebase configuration for hosting.
+- **`package.json`**: Project metadata and dependencies.
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions are welcome! If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
 
-### Making a Progressive Web App
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Important Information
 
-### Deployment
+Use VPN to access. TMDB API is not accessible on all the networks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Screenshots
 
-### `npm run build` fails to minify
+![Screenshot 1](./public/NetflixGPT-1.PNG)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Screenshot 2](./public/NetflixGPT-2.PNG)
+
