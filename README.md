@@ -4,6 +4,7 @@ Welcome to the NetflixGPT React Application! This project is a Netflix-inspired 
 
 ## Table of Contents
 
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
@@ -12,14 +13,26 @@ Welcome to the NetflixGPT React Application! This project is a Netflix-inspired 
 - [Contributing](#contributing)
 - [License](#license)
 - [Important Information](#important-information)
-- [Screenshots](#screenshots)
+
+## Screenshots
+
+Login Page:
+![Screenshot 1](./public/NetflixGPT-1.PNG)
+
+Home Page:
+![Screenshot 2](./public/NetflixGPT-2.PNG)
+
+Home Page (Movie Lists):
+![Screenshot 3](./public/NetflixGPT-3.PNG)
+
+AI Movie Suggestions:
+![Screenshot 4](./public/NetflixGPT-4.PNG)
 
 ## Features
 
 - **User Authentication**: Secure login and registration system.
 - **Movie Browsing**: Explore a vast collection of movies with detailed information.
 - **Intelligent Recommendations**: Receive personalized movie suggestions powered by the Gemini API.
-- **Responsive Design**: Optimized for various devices to ensure a seamless user experience.
 
 ## Technologies Used
 
@@ -33,6 +46,7 @@ Welcome to the NetflixGPT React Application! This project is a Netflix-inspired 
 To get a local copy of the project up and running, follow these steps:
 
 1. **Clone the Repository**:
+
    ```bash
    git clone https://github.com/KhalkarYash/netflix-gpt-react.git
    cd netflix-gpt-react
@@ -40,6 +54,7 @@ To get a local copy of the project up and running, follow these steps:
 
 2. **Install Dependencies**:
    Ensure you have [Node.js](https://nodejs.org/) and npm installed. Then, run:
+
    ```bash
    npm install
    ```
@@ -113,10 +128,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Important Information
 
 Use VPN to access. TMDB API is not accessible on all the networks.
-
-## Screenshots
-
-![Screenshot 1](./public/NetflixGPT-1.PNG)
-
-![Screenshot 2](./public/NetflixGPT-2.PNG)
-
