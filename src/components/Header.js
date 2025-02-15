@@ -30,7 +30,6 @@ const Header = () => {
       })
       .catch((error) => {
         // An error happened.
-        navigate("/error");
       });
   };
 
@@ -74,8 +73,9 @@ const Header = () => {
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
   return (
-    <div className="flex justify-between w-screen py-2 px-8 absolute bg-gradient-to-b from-black z-10">
+    <div className="flex flex-col md:flex-row items-center md:justify-between w-screen py-2 px-8 absolute bg-gradient-to-b from-black z-10">
       <img className="w-44" src={logo} alt="Logo"></img>
+
       {user && (
         <div className="flex p-2">
           {showGptSearch && (
@@ -103,7 +103,7 @@ const Header = () => {
             onClick={handleProfileClick}
           ></img>
           {isOpen && (
-            <div className="absolute -bottom-16 right-10 bg-gray-950 opacity-80 text-white rounded-lg transition-all overflow-hidden">
+            <div className="absolute -bottom-16 right-20 md:right-10 bg-gray-950 opacity-80 text-white rounded-lg transition-all overflow-hidden">
               <ul className="cursor-pointer">
                 <li className="py-1 px-6 text-xs">Hi {user.displayName}!</li>
                 <li className="hover:bg-black py-1 px-6">Profile</li>

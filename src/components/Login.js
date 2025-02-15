@@ -94,14 +94,14 @@ const Login = () => {
       <Header isSignInForm={isSignInForm} />
       <div className="absolute w-screen scroll">
         <img
-          className="h-screen sm:h-auto bg-no-repeat bg-cover bg-center"
+          className="h-screen w-screen object-cover"
           alt="NetflixUI"
           src={BG_URL}
         ></img>
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-[90vw] lg:w-3/12 absolute p-12 bg-black bg-opacity-80 my-36 mx-auto right-0 left-0 text-white rounded-lg transition-all"
+        className="w-full sm:w-2/3 md:w-6/12 lg:w-3/12 absolute p-12 bg-black bg-opacity-80 my-36 mx-auto right-0 left-0 text-white rounded-lg transition-all"
       >
         <h1 className="font-bold text-3xl py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
