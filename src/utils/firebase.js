@@ -13,8 +13,8 @@ const firebaseConfig = {
   projectId: "netflix-gpt-react-f3990",
   storageBucket: "netflix-gpt-react-f3990.firebasestorage.app",
   messagingSenderId: "602453784545",
-  appId: "1:602453784545:web:88df1dc8445606d12204a0",
-  measurementId: "G-91VDVJYW47",
+  appId: "1:602453784545:web:45eef173a2b2e3e52204a0",
+  measurementId: "G-664G61K2YZ"
 };
 
 // Initialize Firebase
